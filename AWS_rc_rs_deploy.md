@@ -119,6 +119,22 @@ soaktestrs-kimmm   1/1       Running   0          1m
 ```
 As we can see, the output is pretty much the same as for a Replication Controller (except for the selector), 
 and for most intents and purposes, they are similar.  
+
+Exploration :- To see the errors when the labels and selectors does not match , feel free to try out the other 2 replica sets
+in the same location :-
+
+```
+kubectl create -f rs_selector2.yaml
+kubectl get po,rs --show-labels
+```
+and this gives an error 
+
+```
+kubectl create -f rs_selector2_bad.yaml 
+Error :- The ReplicaSet "soaktestrsbad" is invalid: spec.template.metadata.labels: Invalid value: map[string]string{"app":"soaktestrspq", "tier":"prod"}: `selector` does not match template `labels`
+```
+
+
 The major difference is that the rolling-update command (we will see an example for this) works with Replication Controllers, 
 but won’t work with a Replica Set.  This is because Replica Sets are meant to be used as the backend for Deployments.
 
