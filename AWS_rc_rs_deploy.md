@@ -161,7 +161,7 @@ deploy_backed_by_rs.yaml is located in - https://github.com/abhikbanerjee/Kubern
 Now go ahead and create the Deployment:
 
 ```
-# kubectl create -f deployment.yaml
+# kubectl create -f deploy_backed_by_rs.yaml
 deployment "soaktest" created
 ```
 Now let’s go ahead and describe the Deployment:
@@ -187,10 +187,10 @@ Events:
 As you can see, rather than listing the individual pods, Kubernetes shows us the Replica Set.  
 Notice that the name of the Replica Set is the Deployment name and a hash value.
 
-We can check the pods for the deployment 
+We can check the pods for the deployment (and also behind the scenes the dpeloyment creates a replica sets)
 
 ```
-# kubectl get pods
+# kubectl get deploy,po,rs
 NAME                        READY     STATUS    RESTARTS   AGE
 soaktest-3914185155-7gyja   1/1       Running   0          2m
 soaktest-3914185155-lrm20   1/1       Running   0          2m
