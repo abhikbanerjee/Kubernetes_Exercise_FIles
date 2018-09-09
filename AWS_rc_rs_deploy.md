@@ -140,8 +140,7 @@ Deployments are intended to replace Replication Controllers.  They provide the s
 Let’s create a simple Deployment using the same image we’ve been using.  
 First create a new file, deploy_bcked_by_rs.yaml, and add the following:
 
-deploy_bcked_by_rs.yaml is located in 
-- https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/rc_rs_deploy
+deploy_backed_by_rs.yaml is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/rc_rs_deploy
 
 Now go ahead and create the Deployment:
 
