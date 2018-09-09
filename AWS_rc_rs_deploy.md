@@ -180,5 +180,7 @@ soaktest-3914185155-7gyja   1/1       Running   0          2m
 soaktest-3914185155-lrm20   1/1       Running   0          2m
 soaktest-3914185155-o28px   1/1       Running   0          2m
 soaktest-3914185155-ojzn8   1/1       Running   0          2m
-```
 soaktest-3914185155-r2pt7   1/1       Running   0          2m
+```
+
+Ref:- https://www.mirantis.com/blog/kubernetes-replication-controller-replica-set-and-deployments-understanding-replication-options/
