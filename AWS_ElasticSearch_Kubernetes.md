@@ -197,9 +197,12 @@ You should see something similar to the following:
   "active_shards_percent_as_number" : 100.0
 }
 ```
+## Get and Post Requests for the Elastic Search cluster
 Now Lets play with some Get and Post Requests for the Elastic Search cluster. We'll use the example of a blog engine, 
 which has some posts and comments. We shall use the command line to index some data to our elastic Search Cluster, 
 and we shall query the results from our browser , to see it all in action
+
+### Create Indexes
 
 Insert name of the user
 ```
@@ -246,7 +249,7 @@ check URL 'http://<Public_IP>:<Load_Balancer_Port>/blog/post/2?pretty=true'
 check URL 'http://<Public_IP>:<Load_Balancer_Port>/blog/post/3?pretty=true'
 
 ```
-Searching Examples - 
+### Searching Examples - 
 
 1. All posts which don't contain the term search:
 ```
