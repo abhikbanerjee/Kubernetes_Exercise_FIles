@@ -34,11 +34,11 @@ Events:
   1m            1m              1       {replication-controller }                       Normal SuccessfulCreate Created pod: soaktestrc-ro2bl
 ```
 
-As we can see, we’ve got the Replication Controller, and there are 3 replicas, of the 3 that we wanted. 
-All 3 of them are currently running.  You can also see the individual pods listed underneath, along with their names.  
+As we can see, we’ve got the Replication Controller, and there are 3 replicas (pods), of the 3 pods that we wanted. 
+All 3 of them are currently running.  You can also see the individual pods listed underneath, along with their names.  We added the --show-labels options and -l option for selecting by labels
 
 ```
-# kubectl get pods
+# kubectl get rc,po --show-labels -l app=soaktestrc
 NAME               READY     STATUS    RESTARTS   AGE
 soaktestrc-cws05   1/1       Running   0          3m
 soaktestrc-g5snq   1/1       Running   0          3m
@@ -52,7 +52,7 @@ replicationcontroller "soaktestrc" deleted
 ```
 check if the pods got deleted
 ```
-# kubectl get pods
+# kubectl get rc,po --show-labels -l app=soaktestrc
 As you can see, when you delete the Replication Controller, you also delete all of the pods that it created.
 ```
 
