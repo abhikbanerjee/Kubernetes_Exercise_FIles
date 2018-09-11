@@ -25,7 +25,7 @@ kubectl create -f https://raw.githubusercontent.com/kelseyhightower/cloud-native
 ```
 
 ```
-kubectl get pods -n kube-system
+kubectl get pods,rs,svc -n kube-system
 ```
 
 Create the prometheus service:
@@ -35,7 +35,7 @@ kubectl create -f https://raw.githubusercontent.com/kelseyhightower/cloud-native
 ```
 
 ```
-kubectl -n kube-system get pods
+kubectl get pods,svc -n kube-system 
 ```
 
 ```
