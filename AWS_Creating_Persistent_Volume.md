@@ -224,7 +224,7 @@ Once you found the fix , You should see the pods restarting again.
 
 hint:- Read the logs of the pod, and try to see if we need to create an object to link it to the PVC (persistent Volume Claim).
 
-Expose the wordpress service
+### Expose the wordpress service
 
 In the previous step, you have deployed a WordPress container which is not currently accessible from outside your cluster as it does not have an external IP address.
 
