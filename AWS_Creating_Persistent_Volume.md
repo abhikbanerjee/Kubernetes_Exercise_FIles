@@ -218,9 +218,11 @@ kubectl get pod -l app=wordpress
 
 ```
 
-Is there an Error ? Can you find out what the error shows ? Did you find the fix for the error ?
+### Is there an Error ? Can you find out what the error shows ? Did you find the fix for the error ?
 
 Once you found the fix , You should see the pods restarting again. 
+
+hint:- Read the logs of the pod, and try to see if we need to create an object to link it to the PVC (persistent Volume Claim).
 
 Expose the wordpress service
 
