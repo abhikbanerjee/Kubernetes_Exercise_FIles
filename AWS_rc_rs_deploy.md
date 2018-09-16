@@ -201,6 +201,8 @@ soaktest-3914185155-r2pt7   1/1       Running   0          2m
 
 ## Try creating a deployment using the yaml file (where the labels and selectors do not match the desciption and check the error
 
+kubectl create -f rs_selector2_bad.yaml
 
+-- check the error for this deployment.
 
 Ref:- https://www.mirantis.com/blog/kubernetes-replication-controller-replica-set-and-deployments-understanding-replication-options/
