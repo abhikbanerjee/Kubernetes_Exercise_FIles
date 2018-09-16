@@ -85,7 +85,7 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" >> /etc/apt/sources.
 sudo apt-get update && sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 
 
-## 4. Extra Services - Set up Kubernetes Dashboard
+## 4. Extra Services - Set up Kubernetes Dashboard (Is a different exercise)
 
  -- Create Kubernetes Dashboard , and enable heapster (https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html )
 
