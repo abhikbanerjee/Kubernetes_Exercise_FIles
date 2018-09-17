@@ -18,23 +18,44 @@ You can get more details by showing and displaying the labels:
 ```
 -- add a label on an existing pod and delete the label  -- 
 
+```
 kubectl label po/helloworld app=helloworldapp --overwrite
+```
 
+```
 kubectl label po/helloworld app-  (remove the label)
+```
+Use Sample Infrastructure to create a bunch of Pods (even though in real life we don't create pods)
 
+```
 kubectl create -f sample-infrastructure-with-labels.yml (creates a bunch of pods with labels)
+```
+Now we use various selectors to search in labels to pull out pods, and delete them
 
--- use selectors to search in labels to pull out pods, and delete them
+```
+kubectl get pods --selector env=production --show-labels
+or
+kubectl get pods -l env=production --show-labels
+```
 
--- kubectl get pods --selector env=production --show-labels
-
--- kubectl get pods -l env=production,dev-lead=amy --show-labels  (equal to)
-
--- kubectl get pods -l env=production,dev-lead!=amy --show-labels  (not equal to)
-
--- kubectl get pods -l 'release-version in (1.0,2.0)' --show-labels (use the in operator)
-
--- kubectl get pods -l 'release-version notin (1.0,2.0)' --show-labels
-
--- kubectl delete pods -l dev-lead=karthik (delete pods with a specific label, works for deployment, replication set)
+We can use and search multiple labels , this represents and
+```
+kubectl get pods -l env=production,dev-lead=amy --show-labels
+```
+We can also have the not equal to operator
+```
+kubectl get pods -l env=production,dev-lead!=amy --show-labels 
+```
+Get the pods, which are in a list of versions - we use the in operator
+```
+kubectl get pods -l 'release-version in (1.0,2.0)' --show-labels
+```
+Get the pods, which are in a list of versions - we use the notin operator
+```
+kubectl get pods -l 'release-version notin (1.0,2.0)' --show-labels
+```
+Delete pods, which match some of the given pods [delete, get with a specific label, works for deployment, replication set too]
+```
+kubectl delete pods -l dev-lead=karthik 
+```
 
