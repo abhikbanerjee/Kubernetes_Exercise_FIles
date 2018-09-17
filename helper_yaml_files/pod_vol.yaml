@@ -25,4 +25,4 @@ spec:
   volumes:
   - name: xchange
     hostPath:
-      path: "/home/ubuntu/abhik_vol"
+      path: "/home/ubuntu/my_vol"
