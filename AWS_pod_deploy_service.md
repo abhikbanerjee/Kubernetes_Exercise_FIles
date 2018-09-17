@@ -40,4 +40,4 @@ Check the currently running pods, deployments, services and replica sets ( we sh
 
 
 
-Ref:- 
+Ref:- https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/
