@@ -7,7 +7,7 @@ Use the yaml files placed here
 
 # Create a deployment with the name blue  (Imperative management using config files)
 ```
-$ kubectl create -f sample-infrastructure-with-labels.yml
+$ kubectl create -f blue.yml
 ```
 Check the currently running pods, deployments, services and replica sets
 ```
@@ -26,11 +26,72 @@ Check the currently running pods, deployments, services and replica sets ( we sh
 ```
 # Use the pod.yaml file and deploy.yaml files (Examples of Imperative commands)
 
+Create a pod using the blue.yaml file
+```
+$ kubectl create -f sample_pod.yml
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
 
+Create a Deployment using the blue.yaml file
+```
+$ kubectl create -f blue.yml
+```
+Try again creating the same blue deployment and see what happens
+```
+$ kubectl create -f blue.yml
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
 
+Now delete the blue, deployment and the pod that was created
+```
+$ kubectl delete pod pod_name
+
+$ kubectl delete deploy blue
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
 
 # One example of Declarative command (use of kubectl apply)
 
+Create a Deployment using the red.yaml file, but now using apply
+```
+$ kubectl apply -f red.yml
+```
+Now go and edit the file and change the replicas from 1 to 3, using vi
+```
+$ vi red.yaml
+
+# change the replicas to 3, save and come out
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
+Now apply these changes using the apply command
+```
+$ kubectl apply -f red.yaml
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
+
+Now delete the red, deployment and see the pods, and deployment going down
+```
+$ kubectl delete deploy blue
+```
+Check for the running pods, deploy, svc, rs
+```
+$ kubectl get po,deploy,rs -o wide -w  # -w is like watch option to see see the changes happening
+```
 
 
 
