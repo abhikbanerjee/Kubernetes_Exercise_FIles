@@ -16,3 +16,5 @@ You can get more details by showing and displaying the labels:
 ```
 # kubectl get po --show-labels
 ```
+
+
