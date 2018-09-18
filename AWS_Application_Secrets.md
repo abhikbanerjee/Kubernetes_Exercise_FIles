@@ -49,3 +49,7 @@ This will print the logs of the pod, and we should be able to see the password a
 ```
 kubectl logs <print-secrets-pod-name>
 ```
+check the base_64_key value by decoding it
+```
+echo -n secret_base_64_key | base64 --decode
+```
