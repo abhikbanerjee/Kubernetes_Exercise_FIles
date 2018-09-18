@@ -60,3 +60,6 @@ change the flag to suspend to true, save and exit
 $ kubectl get cronjobs -o wide
 ```
 The suspended column should show as true, and the cron job should stop executing and stop creating new pods
+
+Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
+
