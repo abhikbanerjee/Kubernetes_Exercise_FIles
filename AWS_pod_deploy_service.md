@@ -4,6 +4,36 @@
 Use the yaml files placed here
 (https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/Ex_pods_deploy_svc)
 
+# Create a pod, deployment and service using the Imperative method
+Create a deployment nginx
+```
+$ kubectl run nginx-deployment --image nginx --port 80
+```
+Check the currently running pods, deployments, services and replica sets
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
+Expose the Deployment as a Service of Loadbalancer 
+```
+$ kubectl expose deploy/nginx-deployment --type=LoadBalancer --name nginx-service 
+```
+Check the currently running pods, deployments, services and replica sets
+```
+$ kubectl get po,deploy,svc,rs -o wide
+```
+### Check for the nginx application from url , using the IP 
+Do a describe on the nginx service , using the IP try doing a curl for that port
+```
+$ kubectl describe nginx-service
+```
+do a 
+```
+$ curl <ip_address>:<port_number>
+
+try this url
+<ip_address>:<port_number>
+
+```
 
 # Create a deployment with the name blue  (Imperative management using config files)
 ```
@@ -92,13 +122,6 @@ Check for the running pods, deploy, svc, rs
 ```
 $ kubectl get po,deploy,rs -o wide -w  # -w is like watch option to see see the changes happening
 ```
-
-
-
-
-
-
-
 
 
 Ref:- https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/
