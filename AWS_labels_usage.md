@@ -70,3 +70,6 @@ delete all pods which belong to the environment production
 kubectl delete pods -l env=production 
 ```
 
+Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
+
+
