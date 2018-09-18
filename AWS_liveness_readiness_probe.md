@@ -64,3 +64,4 @@ $ kubectl describe <pod/helloworld-deployment-with-bad-liveness-probe-pod_name>
 
 ```
 
+Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
