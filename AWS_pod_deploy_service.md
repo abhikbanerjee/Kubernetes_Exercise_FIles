@@ -126,4 +126,6 @@ $ kubectl get po,deploy,rs -o wide -w  # -w is like watch option to see see the 
 ```
 
 
-Ref:- https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/
+Ref:- https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/,
+Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
+
