@@ -93,3 +93,6 @@ p.s - We can also see the history of the rollout , this is enabled by the --reco
 ```
 $ kubectl rollout history deployment/header-deployment
 ```
+
+Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
+
