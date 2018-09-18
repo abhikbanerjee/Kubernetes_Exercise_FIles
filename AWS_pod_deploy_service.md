@@ -69,7 +69,7 @@ Create a Deployment using the blue.yaml file
 ```
 $ kubectl create -f blue.yml
 ```
-Try again creating the same blue deployment and see what happens
+Try again creating the same blue deployment and see what happens (this should give an error)
 ```
 $ kubectl create -f blue.yml
 ```
@@ -114,9 +114,11 @@ Check for the running pods, deploy, svc, rs
 $ kubectl get po,deploy,svc,rs -o wide
 ```
 
-Now delete the red, deployment and see the pods, and deployment going down
+Now delete the red,blue deployment and see the pods, and deployment going down
 ```
 $ kubectl delete deploy blue
+
+$ kubectl delete deploy red
 ```
 Check for the running pods, deploy, svc, rs
 ```
