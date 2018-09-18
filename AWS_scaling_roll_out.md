@@ -26,8 +26,27 @@ kubectl scale deploy helloworld-all-deployment --replicas=4
 
 ## Use Auto-Scaling on an existing deployment 
 
+### Create a nginx deployment
+```
+kubectl run nginx-deployment --image nginx --port 80
+```
+Scale the deployment to 5 pods
+```
+kubectl scale deploy/nginx-deployment --replicas=5
+```
+Add autoscale to an existing deployment nginx
 
+```
+kubectl autoscale deployment nginx-deployment --min=2 --max=10
+```
+check the HPA
+```
+kubectl get hpa
+```
+leave it, and probably it should get to a pod of 2 after a while
 
 ## Functionality of Roll outs and Roll Backs
 
 We will use the yaml files located in this section 
+
+
