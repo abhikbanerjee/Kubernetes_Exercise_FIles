@@ -17,7 +17,7 @@ metadata:
   name: zk
 spec:
   serviceName: zk-hs
-  replicas: 2
+  replicas: 1
   podManagementPolicy: Parallel
   updateStrategy:
     type: RollingUpdate
@@ -43,7 +43,7 @@ spec:
         resources:
           requests:
             memory: "500Mi"
-            cpu: "0.5"
+            cpu: "0.01"
         ports:
         - containerPort: 2181
           name: client
