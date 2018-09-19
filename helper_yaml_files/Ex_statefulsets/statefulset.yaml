@@ -17,7 +17,7 @@ metadata:
   name: zk
 spec:
   serviceName: zk-hs
-  replicas: 1
+  replicas: 2
   podManagementPolicy: Parallel
   updateStrategy:
     type: RollingUpdate
