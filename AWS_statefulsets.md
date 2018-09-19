@@ -9,9 +9,11 @@ https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_ya
 have a look at the Stateful Set file, see the various configuration for Zookeeper master , slave.
 
 ```
-	$ kubectl create -f statefulset.yaml
-  $ kubectl get statefulsets -o wide
+$ kubectl create -f statefulset.yaml
+$ kubectl get statefulsets -o wide
 ```
+
+
 
 
 Ref:- https://www.linkedin.com/learning/learning-kubernetes/next-steps
