@@ -2,7 +2,7 @@
 
 Create a Replication Controller from a file called rc.yaml (inside helper files) and add the following text:
 
-rc.yaml file is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/rc_rs_deploy
+rc.yaml file is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/Ex_rc_rs_deploy
 
 Most of this structure should look familiar from our discussion of Deployments; we’ve got the name of the actual 
 Replication Controller (soaktestrc) and we’re designating that we should have 3 replicas, each of which are 
