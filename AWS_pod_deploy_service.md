@@ -24,7 +24,7 @@ $ kubectl get po,deploy,svc,rs -o wide
 ### Check for the nginx application from url , using the IP 
 Do a describe on the nginx service , using the IP try doing a curl for that port
 ```
-$ kubectl describe nginx-service
+$ kubectl describe svc nginx-service
 ```
 do a 
 ```
