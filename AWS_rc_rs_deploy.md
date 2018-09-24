@@ -64,7 +64,7 @@ Replica Sets are a sort of hybrid, in that they are in some ways more powerful t
 and in others they are less powerful. Replica Sets are declared in essentially the same way as Replication Controllers, 
 except that they have more options for the selector. Use the file rs.yaml for this part
 
-rs.yaml file is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/rc_rs_deploy
+rs.yaml file is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/Ex_rc_rs_deploy
 
 In this case, it’s more or less the same as when we were creating the Replication Controller, 
 except we’re using matchLabels instead of label.  But we could just as easily have said (has matchExpressions):
@@ -156,7 +156,7 @@ Deployments are intended to replace Replication Controllers.  They provide the s
 Let’s create a simple Deployment using the same image we’ve been using.  
 First create a new file, deploy_bcked_by_rs.yaml, and add the following:
 
-deploy_backed_by_rs.yaml is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/rc_rs_deploy
+deploy_backed_by_rs.yaml is located in - https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/Ex_rc_rs_deploy
 
 Now go ahead and create the Deployment:
 
