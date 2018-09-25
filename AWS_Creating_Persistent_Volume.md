@@ -233,6 +233,12 @@ Delete the PV, PVC using the
 kubectl delete pv --all
 kubectl delete pvc --all
 ```
+Create the 2 directories
+```
+mkdir /home/ubuntu/my_test_vol
+mkdir /home/ubuntu/my_test_vol_wp
+```
+
 Then recreate the PV, and the PVC again
 ```
 kubectl create -f mysql-pv.yaml -f wordpress-pv.yaml
