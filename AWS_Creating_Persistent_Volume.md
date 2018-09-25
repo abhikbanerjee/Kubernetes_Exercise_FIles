@@ -1,5 +1,7 @@
 # Create-Persistent-Volume
 
+We shall use the helper yaml files from this directory - 
+https://github.com/abhikbanerjee/Kubernetes_Exercise_Files/tree/master/helper_yaml_files/Ex_volume_pv_pvc
 
 ## Create your PersistentVolumes and PersistentVolumeClaims
 
@@ -224,6 +226,22 @@ Once you found the fix , You should see the pods restarting again.
 
 hint:- Read the logs of the pod, and try to see if we need to create an object to link it to the PVC (persistent Volume Claim).
 
+### Solution
+
+Delete the PV, PVC using the
+```
+kubectl delete pv --all
+kubectl delete pvc --all
+```
+Then recreate the PV, and the PVC again
+```
+kubectl create -f mysql-pv.yaml -f wordpress-pv.yaml
+kubectl create -f mysql-volumeclaim.yaml -f wordpress-volumeclaim.yaml
+```
+On Doing the get on PV, and PVC we should see the PVC binded to the PV's
+```
+kubectl get pv,pvc -o wide
+```
 ### Expose the wordpress service
 
 In the previous step, you have deployed a WordPress container which is not currently accessible from outside your cluster as it does not have an external IP address.
@@ -233,7 +251,6 @@ To expose your WordPress application to traffic from the internet using a load b
 Create the wordpress-service.yaml
 
 ```
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -269,7 +286,8 @@ In the output above, the EXTERNAL-IP column will show the public IP address crea
 
 ## Visit your wordpress blog
 
-After finding out the IP address of your blog, point your browser to this IP address and you will see the WordPress installation screen as follows.  Go throught the basic setup to make sure that stateful data is saved to your database.
+After finding out the IP address of your blog, point your browser to this IP address and you will see the WordPress 
+installation screen as follows.  Go throught the basic setup to make sure that stateful data is saved to your database.
 
 ## Test data persistence on failure
 
