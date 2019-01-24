@@ -50,8 +50,8 @@ $ sudo kubectl taint nodes --all node-role.kubernetes.io/master-
 $ kubectl get pods --all-namespaces
 ```
 
-# Run this if the pods do not come and start
-
+### Run this if the pods do not come up and start
+Ref:- https://github.com/kubernetes/kubeadm/issues/980
 ```
 $ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 ```
