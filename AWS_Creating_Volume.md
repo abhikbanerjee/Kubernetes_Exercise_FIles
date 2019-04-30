@@ -41,8 +41,8 @@ Mount the Volume and see if you can read from the shared volume
 
 ```
 
-Delete all pods and volumes
+Delete all pods and volumes (use the previous yaml file)
 
-	kubectl delete po,svc --all
+	kubectl delete -f https://raw.githubusercontent.com/mhausenblas/kbe/master/specs/volumes/pod.yaml
 
 ```
