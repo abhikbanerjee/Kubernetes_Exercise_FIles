@@ -16,7 +16,7 @@ kubectl logs --tail=5 po/logme
 Grab a stream of the logs
 
 ```
-kubectl logs ‐f ‐‐since=10s po/logme
+kubectl logs ‐f po/logme ‐‐since=10s
 ```
 
 ## Cleanup
