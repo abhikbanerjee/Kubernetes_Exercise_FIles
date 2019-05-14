@@ -24,7 +24,7 @@ $ kubectl describe job countdown
 
 $ kubectl describe pod <countdown-pod_name>
 
-$ kubectl logs pod <countdown-pod_name>
+$ kubectl logs pod/<countdown-pod_name>
 ```
 
 ### Create a Cron Job
@@ -47,7 +47,7 @@ Do a describe on the pods and check the logs
 ```
 $ kubectl describe cronjob periodiccron
 
-$ kubectl logs pod <pod_name> 
+$ kubectl logs pod/<pod_name> 
 
 ```
 Edit the cronjob - Disable it
